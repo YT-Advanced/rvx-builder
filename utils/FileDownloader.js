@@ -21,7 +21,7 @@ async function overWriteJarNames(fileName) {
   if (fileName.includes('integrations') && fileName.endsWith('.apk'))
     global.jarNames.integrations = filePath;
   
-  if (fileName.startsWith('GmsCore') && fileName.endsWith('.apk'))
+  if (fileName.startsWith('microG') && fileName.endsWith('.apk'))
     global.jarNames.microG = filePath;
 
   if (fileName.endsWith('.json')) global.jarNames.patchesList = filePath;
