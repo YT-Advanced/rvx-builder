@@ -2,7 +2,7 @@ const { existsSync, readFileSync, writeFileSync } = require('node:fs');
 
 const defaultSettings = {
   sources: {
-    cli: 'inotia00/revanced-cli',
+    cli: 'revanced/revanced-cli',
     patches: 'YT-Advanced/ReX-patches',
     integrations: 'YT-Advanced/ReX-integrations'
   },

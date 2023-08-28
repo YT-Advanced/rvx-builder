@@ -154,18 +154,16 @@ function reportSys(args, ws) {
 module.exports = async function patchAppWithRipLibs(ws) {
   /** @type {string[]} */
   const args = [
-    '-jar',
+    'patch',
+    `${join(global.revancedDir, global.jarNames.selectedApp.packageName)}.apk`,
+    '--patch-bundle',
     global.jarNames.cli,
     '-b',
     global.jarNames.patchesJar,
-    '-m',
+    '--merge',
     global.jarNames.integrations,
-    '-t',
-    './revanced-cache',
-    '--experimental',
-    '-a',
-    `${join(global.revancedDir, global.jarNames.selectedApp.packageName)}.apk`,
-    '-o',
+    '--force',
+    '--out',
     join(global.revancedDir, 'revanced.apk')
   ];
 

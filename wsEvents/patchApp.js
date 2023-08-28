@@ -73,11 +73,11 @@ async function reinstallReVanced() {
   switch (global.jarNames.selectedApp.packageName) {
     case 'com.google.android.youtube':
       if (!global.jarNames.isRooted)
-        pkgNameToGetUninstalled = 'app.revanced.android.youtube';
+        pkgNameToGetUninstalled = 'app.rvx.android.youtube';
       break;
     case 'com.google.android.apps.youtube.music':
       if (!global.jarNames.isRooted)
-        pkgNameToGetUninstalled = 'app.revanced.android.apps.youtube.music';
+        pkgNameToGetUninstalled = 'app.rvx.android.apps.youtube.music';
       break;
   }
 
@@ -156,16 +156,14 @@ module.exports = async function patchApp(ws) {
   const args = [
     '-jar',
     global.jarNames.cli,
-    '-b',
-    global.jarNames.patchesJar,
-    '-m',
-    global.jarNames.integrations,
-    '-t',
-    './revanced-cache',
-    '--experimental',
-    '-a',
+    'patch', 
     `${join(global.revancedDir, global.jarNames.selectedApp.packageName)}.apk`,
-    '-o',
+    '--patch-bundle',
+    global.jarNames.patchesJar,
+    '--merge',
+    global.jarNames.integrations,
+    '--force',
+    '--out',
     join(global.revancedDir, 'revanced.apk')
   ];
 

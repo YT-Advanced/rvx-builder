@@ -18,9 +18,9 @@ module.exports = function selectPatches(message) {
     includedPatchesArray.push(patchName);
 
     if (isFirstElement) {
-      global.jarNames.patches += `-i ${patchName}`;
+      global.jarNames.patches += `--include ${patchName}`;
       isFirstElement = false;
-    } else global.jarNames.patches += ` -i ${patchName}`;
+    } else global.jarNames.patches += ` --include ${patchName}`;
   }
 
   global.jarNames.isRooted = false;
@@ -32,6 +32,6 @@ module.exports = function selectPatches(message) {
 
     if (patch.includes('microg-support') || patch.includes('MicroG support')) global.jarNames.isRooted = true;
 
-    global.jarNames.patches += ` -e ${patchName}`;
+    global.jarNames.patches += ` --exclude ${patchName}`;
   }
 };
