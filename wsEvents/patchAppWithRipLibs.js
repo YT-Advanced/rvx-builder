@@ -207,7 +207,7 @@ module.exports = async function patchAppWithRipLibs(ws) {
       })
     );
 
-    if (data.toString().includes('Finished')) await afterBuild(ws);
+    if (data.toString().includes('Copying to')) await afterBuild(ws);
 
     if (data.toString().includes('INSTALL_FAILED_UPDATE_INCOMPATIBLE')) {
       await reinstallReVanced(ws);
@@ -225,7 +225,7 @@ module.exports = async function patchAppWithRipLibs(ws) {
       })
     );
 
-    if (data.toString().includes('Finished')) await afterBuild(ws);
+    if (data.toString().includes('Copying to')) await afterBuild(ws);
 
     if (data.toString().includes('INSTALL_FAILED_UPDATE_INCOMPATIBLE')) {
       await reinstallReVanced(ws);
