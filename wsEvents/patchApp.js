@@ -126,7 +126,7 @@ function outputName() {
   const part6 = `patches_${global.jarNames.patchesJar
     .split(separator)
     .at(-1)
-    .replace('revanced-patches-', '')
+    .replace('ReX-patches-', '')
     .replace('.jar', '')}`;
 
   // Filename: ReVanced-<AppName>-<AppVersion>-[Arch]-cli_<CLI_Version>-patches_<PatchesVersion>.apk
@@ -154,7 +154,7 @@ function reportSys(args, ws) {
   );
 
   console.log(
-    '[builder] Please report these informations to https://github.com/inotia00/rvx-builder/issues'
+    '[builder] Please report these informations to https://github.com/YT-Advanced/rvx-builder/issues'
   );
   console.log(
     `OS: ${process.platform}\nArguements: ${args.join(

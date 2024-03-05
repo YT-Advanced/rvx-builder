@@ -44,7 +44,7 @@ module.exports = async function updateFiles(ws) {
       repo: integrations[1]
     },
     {
-      owner: 'inotia00',
+      owner: 'YT-Advanced',
       repo: 'VancedMicroG'
     }
   ];

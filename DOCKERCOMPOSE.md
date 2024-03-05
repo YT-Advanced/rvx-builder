@@ -17,7 +17,7 @@ winget install --id=Git.Git -e  && winget install --id=Docker.DockerDesktop -e -
 
 5. Now that you have a Terminal running, run:
 ```
-git clone -b revanced-extended https://github.com/inotia00/rvx-builder --depth=1 --no-tags
+git clone -b revanced-extended https://github.com/YT-Advanced/rvx-builder --depth=1 --no-tags
 ```
 
 6. Then run this command to get from here to the rvx-builder directory:

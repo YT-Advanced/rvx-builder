@@ -131,14 +131,14 @@ pf.getPortPromise()
 process.on('uncaughtException', (reason) => {
   log(`An error occured.\n${reason.stack}`);
   log(
-    'Please report this bug here: https://github.com/inotia00/rvx-builder/issues.'
+    'Please report this bug here: https://github.com/YT-Advanced/rvx-builder/issues.'
   );
 });
 
 process.on('unhandledRejection', (reason) => {
   log(`An error occured.\n${reason.stack}`);
   log(
-    'Please report this bug here: https://github.com/inotia00/rvx-builder/issues.'
+    'Please report this bug here: https://github.com/YT-Advanced/rvx-builder/issues.'
   );
 
   for (const wsClient of wsClients) {
@@ -146,7 +146,7 @@ process.on('unhandledRejection', (reason) => {
       JSON.stringify({
         event: 'error',
         error: encodeURIComponent(
-          `An error occured:\n${reason.stack}\nPlease report this bug here: https://github.com/inotia00/rvx-builder/issues.`
+          `An error occured:\n${reason.stack}\nPlease report this bug here: https://github.com/YT-Advanced/rvx-builder/issues.`
         )
       })
     );

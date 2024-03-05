@@ -15,10 +15,10 @@ async function overWriteJarNames(fileName) {
   const filePath = joinPath(global.revancedDir, fileName);
   if (fileName.includes('revanced-cli')) global.jarNames.cli = filePath;
 
-  if (fileName.includes('revanced-patches') && fileName.endsWith('.jar'))
+  if (fileName.includes('ReX-patches') && fileName.endsWith('.jar'))
     global.jarNames.patchesJar = filePath;
 
-  if (fileName.endsWith('.apk') && !fileName.startsWith('VancedMicroG'))
+  if (fileName.includes('integrations') && fileName.endsWith('.apk'))
     global.jarNames.integrations = filePath;
 
   if (fileName.startsWith('VancedMicroG')) global.jarNames.microG = filePath;
