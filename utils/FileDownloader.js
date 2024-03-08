@@ -50,7 +50,8 @@ async function getDownloadLink(json) {
 
     if (!releasesPage.ok)
       throw new Error(
-        'You got ratelimited from GitHub\n...Completely? What did you even do?'
+        'You got ratelimited from GitHub\n...Completely? XX What did you even do?' +
+        'repo: '+`https://github.com/${json.owner}/${json.repo}/releases/latest`
       );
 
     const releasePage = await releasesPage.text();
